@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: white;
+}
+
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: #337AB7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #9C2759;
+  --petrolizado:#0B3860;
+  --blanco: #fff;
+  --azulespecial:rgba(1, 10, 52, 0.838);
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+
+}
+
+/* Se diseña primero el movile first ----------------*/
+
+.logo{
+    background-color: var(--negro2);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.logo i{
+    color: var(--blanco);
+    font-size: 2rem;
+}
+.logo img{
+    max-width: 200px;
+    width: 30%;
+}
+
+nav{
+    background-color: var(--azulespecial);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    position: absolute;
+    z-index: 100;
+    top: 80px;
+    width: 100%;
+}
+.menu-hr{
+    width: 90%;
+    background-color: var(--blanco);
+    height: 1px;
+    margin: 1rem 0;
+}
+.menu-item{
+    padding: 1rem 0;
+} 
+nav a{
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'Marcellus', serif;     
+}
+nav a:hover{
+    background-color: var(--petrolizado);
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.navbar-button{
+    font-size: 1.5rem;
+    font-family: 'Marcellus', serif;  
+    background-color: transparent;
+    padding: 0.5rem;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.banner{
+    background-image: url(../img/slide2.png);
+    display: flex;
+    height: 400px;
+    background-size: cover;
+    flex-direction: column-reverse;
+    background-position: 50% 50%;
+    position: relative;
+    z-index: 0;
+}
+
+.descripcion{
+    padding: 2rem 2rem 0 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.descripcion .imagen-logo{
+    background-image: url(../img/HoteliaHorizontalBlanco.svg);
+    visibility: hidden;
+}
+
+.feature{
+    height: 250px;
+    font-family: 'Marcellus', serif; 
+    background-image: url(../img/bg-features.png);
+}
+.feature h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: aliceblue;
+    padding: 2rem;
+}
+section .cara{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.cara div{
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.488);
+    padding: 1rem 0;
+    height: 80px;
+    width: 100px;
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: 'Marcellus', serif; 
+}
+.ubicacion h2,h3{
+    margin: 1rem;
+}
+.ubicacion .mapa{
+    border: 2px solid var(--azulnegro);
+}
+
+.opiniones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,67,97,1) 85%);
+}
+.opiniones .op{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--blanco);
+    margin: 1rem;
+    border: 2px solid var(--negro2);
+    border-radius: 10%;
+    text-align: center;
+
+}
+
+.opiniones .op1{
+    background-image: url(../img/usuario1.jpg);
+    background-size: cover; 
+    border: 2px solid var(--azulnegro);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+}
+
+.opiniones .op2{
+    background-image: url(../img/usuario3.jpg);
+    background-size: cover; 
+    border: 2px solid var(--azulnegro);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--negro2);
+    color: var(--blanco);
+    padding: 1rem;
+    font-family: 'Marcellus', serif; 
+
+}
+
+/* Empieza tablet */
+@media (min-width: 600px) {
+    header nav{
+        visibility: hidden;
+    }
+    .banner{
+        height: 600px;
+    }
+    .descripcion{
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .descripcion .imagen-logo{
+        
+        visibility: visible;
+    }
+    .feature{
+        height: 250px;
+        font-family: 'Marcellus', serif; 
+    }
+    .cara{
+        display: flex;
+        justify-content:center;   
+        width: 1000px; 
+    }
+    .cara div{
+        display: flex; 
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.488);
+        padding: 1rem 0;
+        height: 80px;
+        width: 100px;
+    }
+    .opiniones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,67,97,1) 85%);
+    }
+  }
+    
