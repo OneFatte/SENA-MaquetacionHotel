@@ -150,6 +150,11 @@ section .cara{
     margin: 1rem;
 }
 .ubicacion .mapa{
+    
+    width:400px;
+    height:350px;
+}
+.borde{
     border: 2px solid var(--azulnegro);
 }
 
@@ -229,11 +234,14 @@ section .cara{
     .feature{
         height: 250px;
         font-family: 'Marcellus', serif; 
+        display: flex;
+        flex-direction: column;
     }
+
     .cara{
         display: flex;
-        justify-content:center;   
-        width: 1000px; 
+        justify-content:space-around;   
+        width: auto; 
     }
     .cara div{
         display: flex; 
@@ -245,12 +253,22 @@ section .cara{
         height: 80px;
         width: 100px;
     }
+    .ubicacion .mapa{
+        display: flex;
+        justify-content: center;
+        width:1000px;
+        height:850px;
+
+    }
     .opiniones{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 2rem;
         background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,67,97,1) 85%);
+    }
+    .opiniones p{
+        width: 400px;
     }
   }
     
