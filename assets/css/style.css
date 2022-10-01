@@ -89,7 +89,7 @@ nav a:hover{
 }
 
 .banner{
-    background-image: url(../img/slide2.png);
+    background-image: url(../img/slide1.jpg);
     display: flex;
     height: 400px;
     background-size: cover;
@@ -104,6 +104,7 @@ nav a:hover{
     font-family: 'Marcellus', serif; 
     margin: 0.5rem;  
     background-color:rgba(1, 1, 1, 0.449);
+    font-size: 2rem;
 }
 
 .descripcion{
@@ -126,12 +127,16 @@ nav a:hover{
     text-align: center;
     color: aliceblue;
     padding: 2rem;
+    background-color:rgba(1, 1, 1, 0.449);
+    font-size: 1rem;
+    margin: 0.5rem;
 }
 section .cara{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin: 2rem;
+    color: var(--blanco);
     
 }
 .cara div{
@@ -156,6 +161,12 @@ section .cara{
 .ubicacion h2,h3{
     margin: 1rem;
 }
+.ubicacion h3{
+    text-decoration:underline;
+}
+.ubicacion h4{
+    text-align: center;
+}
 .ubicacion .mapa{
     
     width:400px;
@@ -170,7 +181,9 @@ section .cara{
     flex-direction: column;
     align-items:center;
     padding: 2rem;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,67,97,1) 85%);
+    color: var(--blanco);
+    font-family: 'Marcellus', serif; 
+    background: linear-gradient(0deg, white 60%, black 60%);
 }
 .opiniones .mensaje{
     color: var(--blanco);
@@ -179,7 +192,7 @@ section .cara{
 }
 .usu{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     padding: 2px;
 }
@@ -187,38 +200,50 @@ section .cara{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
-    background-color: var(--blanco);
+    background-color: var(--azulespecial);
     margin: 1rem;
     border: 2px solid var(--negro2);
-    border-radius: 10%;
     text-align: center;
 }
-
+.opiniones img{
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
 .opiniones .op1{
-    background-image: url(../img/usuario1.jpg);
-    background-size: cover; 
-    border: 2px solid var(--azulnegro);
-    border-radius: 10%;
-    width: 200px;
-    height: 200px;
+    background-image: url(/assets/img/Vector-opinion.png);
+    background-size:100%; 
+    width: 400px;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    margin: 2px;
+    
 }
 
 .opiniones .op2{
-    background-image: url(../img/usuario3.jpg);
-    background-size: cover; 
-    border: 2px solid var(--azulnegro);
-    border-radius: 10%;
-    width: 200px;
-    height: 200px;
+    background-image: url(/assets/img/Vector-opinion.png);
+    background-size:100%; 
+    width: 400px;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    margin: 2px;
+}
+.opiniones .op3{
+    background-image: url(/assets/img/Vector-opinion.png);
+    background-size:100%; 
+    width: 400px;
+    height: auto;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
 }
 .footer{
     display: flex;
@@ -227,7 +252,22 @@ section .cara{
     color: var(--blanco);
     padding: 1rem;
     font-family: 'Marcellus', serif; 
-
+}
+.footer .izq,.der,.cent{
+    width: 350px;
+    height: 150px;
+    font-family: 'Marcellus', serif; 
+}
+.footer .cent{
+    display: flex;
+    flex-direction: column; 
+}
+.cent div{
+    display: flex;
+    justify-content:left;
+}
+.cent p{
+    margin-left: 0.5rem;
 }
 
 /* Empieza tablet */
@@ -238,7 +278,6 @@ section .cara{
     .banner{
         display: flex;
         justify-content:end;
-        align-items: center;
         height: 600px;
     }
     .banner p{
@@ -248,12 +287,14 @@ section .cara{
     }
     .descripcion{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 2rem;
         font-family: 'Roboto', sans-serif;
     }
+    .descripcion .texto{
+        padding: 1rem;
+    }
     .descripcion .imagen-logo{
-        
         visibility: visible;
     }
     .feature{
@@ -291,7 +332,12 @@ section .cara{
         justify-content: space-around;
         text-align: center;
         padding: 2rem;
-        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,67,97,1) 85%);
+    }
+    .usu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2px;
     }
     .opiniones p{
         width: 400px;
