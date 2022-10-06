@@ -134,6 +134,7 @@ nav a:hover{
     font-family: 'Roboto', sans-serif;
 }
 .descripcion .imagen-logo{
+    height: 2rem;
     background-image: url(../img/HoteliaHorizontalBlanco.svg);
     visibility: hidden;
 }
@@ -357,4 +358,86 @@ nav a:hover{
 }
 .cent p{
     margin-left: 0.5rem;
+}
+
+/* Empieza tablet */
+@media (min-width: 600px) {
+    .logo{
+        grid-area: logo;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo-img menu-bars";
+        justify-content: space-between;
+        background-color: var(--negro2);
+        padding: 1rem;
+        height: 80px;
+    }
+    
+    .logo i{
+        grid-area: menu-bars;
+        color: var(--blanco);
+        font-size: 2rem;
+    }
+    .logo img{
+        grid-area: logo-img;
+        width: 40%;
+    }
+    nav{
+        visibility: hidden;
+    }
+
+    .banner{
+        height: 600px;
+    }
+    .descripcion{
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas: "texto logo" ;
+        justify-content: space-between;
+        padding: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .descripcion .texto{
+        grid-area: texto;
+        padding: 1rem;
+    }
+    .descripcion .imagen-logo{
+        height: fit-content;
+        grid-area: logo;
+        visibility: visible;
+    }
+    .feature .cara{
+        display:grid;
+        justify-content: space-around;
+        text-align: center;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "feat1 feat2 feat4 feat3";
+        margin: 1rem;
+        color: var(--blanco);
+    }
+    .usu{
+        grid-area: op;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "op1 op2 op3";
+        justify-content: space-around;
+        padding: 2px;
+    }
+    .opiniones .op1{
+        grid-area: op1;
+    }
+    
+    .opiniones .op2{
+        grid-area: op2;
+    }
+    .opiniones .op3{
+        grid-area: op3;
+    }
 }
